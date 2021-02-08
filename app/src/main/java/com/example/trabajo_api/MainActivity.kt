@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
             val resultado = model.getResults().await()
             withContext(Dispatchers.Main){
                 model.changeLoading(binding.root)
+                adapter.setCoinList(resultado)
             }
-            adapter.setCoinList(resultado)
         }
     }
 
@@ -39,6 +39,12 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerViewCoins.adapter = adapter
 
     }
+
+    // crear el recycler aqui o en el viewmodel
+    // transformar el json dentro de la descarga o fuera con otra funcion mejor
+    // si quiero que cada item del adapter sea un boton para cambiar de pantalla a otra actividad
+    // o mejor no.
+    // y en caso de si, mejor usar un callback o crear el intent directamente desde el adapter o pasarlo a main y crear el activity desde main.
 
 
 }

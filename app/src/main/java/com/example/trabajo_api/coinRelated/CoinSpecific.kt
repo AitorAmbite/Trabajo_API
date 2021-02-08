@@ -7,7 +7,6 @@ data class CoinSpecific (
     var id: String,
     var name: String,
     var symbol: String,
-    var parent: Parent,
     var rank: Int,
     var description: String,
     @SerializedName("open_source")var openSource:Boolean

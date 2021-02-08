@@ -6,7 +6,8 @@
     android:orientation="horizontal"
     android:gravity="center_vertical"
     android:padding="10dp"
-    android:layout_marginTop="10dp">
+    android:layout_marginTop="10dp"
+    android:id="@+id/LinearRecycler">
 
     <TextView
         android:id="@+id/tv_coin_id"
@@ -24,5 +25,5 @@
         android:text="Nombre Moneda"
         android:textSize="20sp" />
 
-    
+
 </LinearLayout>

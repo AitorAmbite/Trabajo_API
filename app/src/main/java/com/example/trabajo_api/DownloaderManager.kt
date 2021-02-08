@@ -30,7 +30,8 @@ DownloaderManager {
             val call = client.newCall(request)
             return call.execute().body?.string()
         }
-//: List<CoinBasic>?
+
+
         suspend fun transformJsonToGson(jsonData :String): List<CoinBasic>? {
             val JsonObject = JSONArray(jsonData)
             println(JsonObject)
